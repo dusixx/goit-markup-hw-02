@@ -1,0 +1,168 @@
+:root {
+  --text-color: #757575;
+  --title-color: #212121;
+  --accent-color: #2196f3;
+  --white-color: #ffffff;
+  --black-color: #000000;
+  --background-color: var(--white-color);
+  --background-sec-color: #2f303a;
+  --btn-sec-background: #f5f4fa;
+  --footer-link-color: rgba(255, 255, 255, 0.6);
+}
+
+.page {
+  font-family: Roboto, Tahoma, Verdana, sans-serif;
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+.logo {
+  font-family: Raleway;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 31px;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  color: var(--black-color);
+}
+
+.logo span {
+  color: var(--accent-color);
+}
+
+.link {
+  text-decoration: none;
+  color: var(--title-color);
+}
+
+.link.current {
+  color: var(--accent-color);
+}
+
+.link:hover,
+.link:focus-visible {
+  color: var(--accent-color);
+}
+
+.list {
+  list-style: none;
+}
+
+.hero-header {
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 60px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--white-color);
+  background: var(--background-sec-color);
+}
+
+.section-header {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 42px;
+  letter-spacing: 0.03em;
+  color: var(--title-color);
+}
+
+.advantages .title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  color: var(--title-color);
+  text-transform: uppercase;
+}
+
+.advantages .text {
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+}
+
+.team .title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.03em;
+  color: var(--title-color);
+}
+
+.team .text {
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.03em;
+}
+
+.hidden-text {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+.button {
+  cursor: pointer;
+  border-radius: 4px;
+  border: none;
+}
+
+.button.primary {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0.06em;
+  color: var(--white-color);
+  background: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.button.primary:hover,
+.button.primary:focus-visible {
+  color: var(--accent-color);
+  background: var(--white-color);
+}
+
+.button.secondary {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.03em;
+  color: var(--title-color);
+  /* временно для превью */
+  background: var(--btn-sec-background);
+}
+
+.button.secondary:hover,
+.button.secondary:focus-visible {
+  color: var(--white-color);
+  background: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.works .title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 36px;
+  letter-spacing: 0.06em;
+  color: var(--title-color);
+}
+
+.works .text {
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0.03em;
+}
+
+.footer .link {
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  color: var(--footer-link-color);
+  /* временно для превью */
+  background: var(--background-sec-color);
+}
+
+.footer .link:hover,
+.footer .link:focus-visible {
+  color: var(--white-color);
+}
