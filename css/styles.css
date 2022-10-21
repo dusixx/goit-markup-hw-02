@@ -9,8 +9,8 @@
 
   /* text */
   --font-family: Roboto, Tahoma, Verdana, sans-serif;
-  --font-size-px: 14;
-  --font-size: calc(var(--font-size-px) * 1px);
+  --font-size-px-num: 14;
+  --font-size-px: calc(var(--font-size-px-num) * 1px);
   --letter-spacing: 0.03em;
   --text-color: #757575;
   --title-color: #212121;
@@ -21,8 +21,8 @@
   --background-sec-color: var(--light-grey-color);
 
   /* button */
-  --btn-font-size-px: 16;
-  --btn-font-size: calc(var(--btn-font-size-px) * 1px);
+  --btn-font-size-px-num: 16;
+  --btn-font-size-px: calc(var(--btn-font-size-px-num) * 1px);
   --btn-prim-color: var(--white-color);
   --btn-prim-background: var(--accent-color);
   --btn-prim-hover-background: var(--accent-sec-color);
@@ -53,7 +53,7 @@
 
 .page {
   font-family: var(--font-family);
-  font-size: var(--font-size);
+  font-size: var(--font-size-px);
   letter-spacing: var(--letter-spacing);
   color: var(--text-color);
   background: var(--background-color);
@@ -82,7 +82,6 @@
 
 .logo {
   font-family: Raleway;
-  font-weight: 700;
   font-size: 26px;
   line-height: calc(31 / 26);
   text-decoration: none;
@@ -108,7 +107,7 @@
   text-decoration: none;
   color: var(--title-color);
   font-weight: 500;
-  line-height: calc(16 / var(--font-size-px));
+  line-height: calc(16 / var(--font-size-px-num));
   letter-spacing: 0.02em;
 }
 
@@ -119,9 +118,10 @@
 }
 
 .footer .link {
-  font-weight: 400;
-  line-height: calc(24 / var(--font-size-px));
+  font-weight: inherit;
+  line-height: calc(24 / var(--font-size-px-num));
   color: var(--footer-link-color);
+  letter-spacing: inherit;
   font-style: normal;
 }
 
@@ -136,7 +136,7 @@
 
 .btn {
   font-family: inherit;
-  font-size: var(--btn-font-size);
+  font-size: var(--btn-font-size-px);
   border-radius: 4px;
   text-align: center;
   cursor: pointer;
@@ -145,7 +145,7 @@
 
 .btn.primary {
   font-weight: 700;
-  line-height: calc(30 / var(--btn-font-size-px));
+  line-height: calc(30 / var(--btn-font-size-px-num));
   letter-spacing: 0.06em;
   color: var(--btn-prim-color);
   background: var(--btn-prim-background);
@@ -159,7 +159,7 @@
 
 .btn.secondary {
   font-weight: 500;
-  line-height: calc(26 / var(--btn-font-size-px));
+  line-height: calc(26 / var(--btn-font-size-px-num));
   letter-spacing: 0.03em;
   color: var(--title-color);
   background: var(--btn-sec-background);
@@ -187,7 +187,6 @@
 }
 
 .section-title {
-  font-weight: 700;
   font-size: 36px;
   line-height: calc(42 / 36);
   color: var(--title-color);
@@ -204,13 +203,12 @@
 }
 
 .advantages .subtitle {
-  font-weight: 700;
-  line-height: calc(16 / var(--font-size-px));
+  line-height: calc(16 / var(--font-size-px-num));
   text-transform: uppercase;
 }
 
 .advantages .text {
-  line-height: calc(24 / var(--font-size-px));
+  line-height: calc(24 / var(--font-size-px-num));
 }
 
 .team .subtitle {
@@ -231,7 +229,6 @@
 }
 
 .works .subtitle {
-  font-weight: 700;
   font-size: 18px;
   line-height: calc(36 / 18);
   letter-spacing: 0.06em;
