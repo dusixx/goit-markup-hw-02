@@ -35,7 +35,7 @@
 
   /* footer */
   --footer-link-color: rgba(255, 255, 255, 0.6);
-  --footer-link-hover-color: var(--white-color);
+  --footer-link-accent-color: var(--white-color);
   --footer-background-color: var(--dark-grey-color);
 
   /* logo */
@@ -51,7 +51,7 @@
   Default
 */
 
-.page {
+body {
   font-family: var(--font-family);
   font-size: var(--font-size-px);
   letter-spacing: var(--letter-spacing);
@@ -63,7 +63,7 @@
   list-style: none;
 }
 
-.hidden {
+.visually-hidden {
   position: absolute;
   white-space: nowrap;
   width: 1px;
@@ -105,16 +105,14 @@
 
 .link {
   text-decoration: none;
-  color: var(--title-color);
+  color: inherit;
   font-weight: 500;
   line-height: calc(16 / var(--font-size-px-num));
   letter-spacing: 0.02em;
 }
 
-.link:hover,
-.link:focus-visible,
-.link.current {
-  color: var(--link-hover-color);
+.header-nav .link {
+  color: var(--title-color);
 }
 
 .footer .link {
@@ -125,9 +123,14 @@
   font-style: normal;
 }
 
-.footer .link:hover,
-.footer .link:focus-visible {
-  color: var(--footer-link-hover-color);
+.footer .addr {
+  color: var(--footer-link-accent-color);
+}
+
+.link:hover,
+.link:focus-visible,
+.link.current {
+  color: var(--link-hover-color);
 }
 
 /********************************
@@ -200,6 +203,8 @@
 
 .subtitle {
   color: var(--title-color);
+  /* иначе берет дефолтное для заголовка */
+  font-size: inherit;
 }
 
 .advantages .subtitle {
