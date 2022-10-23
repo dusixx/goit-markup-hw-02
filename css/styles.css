@@ -4,7 +4,9 @@
   --accent-sec-color: #188ce8;
   --white-color: #ffffff;
   --black-color: #000000;
+  --grey-color: #757575;
   --dark-grey-color: #2f303a;
+  --dark-grey-color-sec: #212121;
   --light-grey-color: #f5f4fa;
 
   /* text */
@@ -12,8 +14,8 @@
   --font-size-px-num: 14;
   --font-size-px: calc(var(--font-size-px-num) * 1px);
   --letter-spacing: 0.03em;
-  --text-color: #757575;
-  --title-color: #212121;
+  --text-color: var(--grey-color);
+  --title-color: var(--dark-grey-color-sec);
   --hero-title-color: var(--white-color);
 
   /* background */
@@ -26,12 +28,11 @@
   --btn-prim-color: var(--white-color);
   --btn-prim-background: var(--accent-color);
   --btn-prim-hover-background: var(--accent-sec-color);
-  --btn-prim-box-shaddow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  --btn-prim-shaddow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   --btn-sec-background: var(--light-grey-color);
   --btn-sec-hover-color: var(--white-color);
   --btn-sec-hover-background: var(--accent-color);
-  --btn-sec-box-shaddow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
+  --btn-sec-shaddow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 
   /* footer */
   --footer-link-color: rgba(255, 255, 255, 0.6);
@@ -39,7 +40,7 @@
   --footer-background-color: var(--dark-grey-color);
 
   /* logo */
-  --logo-suffix-blue: var(--accent-color);
+  --logo-prefix-blue: var(--accent-color);
   --logo-suffix-dark: var(--black-color);
   --logo-suffix-light: var(--white-color);
 
@@ -84,11 +85,8 @@ body {
   font-family: Raleway;
   font-size: 26px;
   line-height: calc(31 / 26);
+  color: var(--logo-prefix-blue);
   text-decoration: none;
-}
-
-.logo-prefix {
-  color: var(--logo-suffix-blue);
 }
 
 .logo-suffix {
@@ -152,7 +150,7 @@ body {
   letter-spacing: 0.06em;
   color: var(--btn-prim-color);
   background: var(--btn-prim-background);
-  box-shadow: var(--btn-prim-box-shaddow);
+  box-shadow: var(--btn-prim-shaddow);
 }
 
 .btn.primary:hover,
@@ -172,7 +170,7 @@ body {
 .btn.secondary:focus-visible {
   color: var(--btn-sec-hover-color);
   background: var(--btn-sec-hover-background);
-  box-shadow: var(--btn-sec-box-shaddow);
+  box-shadow: var(--btn-sec-shaddow);
 }
 
 /********************************
@@ -203,7 +201,6 @@ body {
 
 .subtitle {
   color: var(--title-color);
-  /* иначе берет дефолтное для заголовка */
   font-size: inherit;
 }
 
